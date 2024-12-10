@@ -200,6 +200,31 @@ console.log(isEmpty("    a "));
 // isEqualStr (“ Simplon”,”tunis ”)➞ false
 // isEqualStr (“CA”,”FS”)➞ true
 
+function isEqualStr(Str1) {
+    let counter1 =0;
+    for (let i=0; i < Str1.length;i++){
+        if (Str1.charAt(i) ===" "){
+            counter1++;
+        }
+    }
+    for (let i=0; i < Str2.length;i++){
+        if (Str2.charAt(i) ===" "){
+            counter2++;
+        }
+    }
+
+
+
+    if (counter1 === counter2 ){
+        return true;
+    }
+     else{
+        return false;
+     }
+  
+}
+console.log(isEqualStr("",""));
+
 // Exercise 7
 
 // Create a function that takes two numbers, a and b, return true if a can be divided evenly by b , return false otherwise.
