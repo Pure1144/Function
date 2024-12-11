@@ -86,20 +86,15 @@
 // function FizzBuzz(Too1) {
 //   if (Too1 % 3 == 0 || Too1 % 5 == 0) {
 //     return "FizzBuzz";
-//   } else if (Too1 % 3 == 0) {                    //   <li>If input/parameter is NOT divisible by 3 or 5 print => given Input Number/Value</li>              
+//   } else if (Too1 % 3 == 0) {                    //   <li>If input/parameter is NOT divisible by 3 or 5 print => given Input Number/Value</li>
 //     return "fizz"
 //   } else if (Too1 % 5 == 0) {
-//     return "buzz";                   
+//     return "buzz";
 //   }else{
 //     return "invalid input"                        //   <li>If input/parameter is other than Number/Value print => 'Nan - Not a Number! Please Input Number' </li>
 //   }
 // }
 // console.log(FizzBuzz(13));
-
-
-
-
-
 
 // Exercise 2
 
@@ -114,14 +109,11 @@
 // function factorial(Too1) {
 //     let factorial=1
 //     for ( let i=1; i<=Too1; i++) {
-//         factorial=factorial*i 
+//         factorial=factorial*i
 //     }
 //     return factorial;
 //   }
 //   console.log(factorial(7));
-
-
-
 
 // Exercise 3
 // Identify if a number is Odd or Even?
@@ -140,9 +132,6 @@
 // }
 // console.log(OddOrEven(7));
 
-
-
-
 // Exercise 4
 
 // Return the sum of a number going back to it's root. In other words, the function will work like this:
@@ -154,17 +143,13 @@
 // > 36
 
 // function addUp(Too1){
-    
+
 // for( i=1;i<=Too1;i++){
 //      Too1=Too1+i
 // }
 // return addUp;
 // }
 // console.log(addUp(5));
-
-
-
-
 
 // Exercise 5
 
@@ -173,23 +158,19 @@
 // isEmpty(“Chaima”)➞ false
 
 function isEmpty(Str) {
-    let counter =0;
-    for (let i=0; i < Str.length;i++){
-        if (Str.charAt(i) ===" "){
-            counter++;
-        }
+  let counter = 0;
+  for (let i = 0; i < Str.length; i++) {
+    if (Str.charAt(i) === " ") {
+      counter++;
     }
-    if (counter === Str.length){
-        return true;
-    }
-     else{
-        return false;
-     }
-  
+  }
+  if (counter === Str.length) {
+    return true;
+  } else {
+    return false;
+  }
 }
 console.log(isEmpty("    a "));
-
-
 
 // Exercise 6
 
@@ -200,30 +181,14 @@ console.log(isEmpty("    a "));
 // isEqualStr (“ Simplon”,”tunis ”)➞ false
 // isEqualStr (“CA”,”FS”)➞ true
 
-function isEqualStr(Str1) {
-    let counter1 =0;
-    for (let i=0; i < Str1.length;i++){
-        if (Str1.charAt(i) ===" "){
-            counter1++;
-        }
-    }
-    for (let i=0; i < Str2.length;i++){
-        if (Str2.charAt(i) ===" "){
-            counter2++;
-        }
-    }
-
-
-
-    if (counter1 === counter2 ){
-        return true;
-    }
-     else{
-        return false;
-     }
-  
+function isEqualStr(Str1, Str2) {
+  if (Str1.length == Str2.length) {
+    return true;
+  } else {
+    return false;
+  }
 }
-console.log(isEqualStr("",""));
+console.log(isEqualStr("Simpl", "tunis"));
 
 // Exercise 7
 
@@ -232,6 +197,15 @@ console.log(isEqualStr("",""));
 // oneDevideByTwo(10,2)➞true
 // oneDevideByTwo(13,2)➞false
 
+function numbers(a, b) {
+  if (a % b == 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+console.log(numbers(10, 3));
+
 // Exercise 8
 
 // Create a function that takes in a mood and return a sentence in the following format:
@@ -239,17 +213,52 @@ console.log(isEqualStr("",""));
 // moodToday("happy") ➞ "Today, I am feeling happy"
 // moodToday( ) ➞ "Today, I am feeling neuter"
 
+function mood(str) {
+  if (str === undefined) {
+    return "Today, I am feeling neuter";
+  } else {
+    return `Today, I am feeling ${str}`;
+  }
+}
+
+console.log(mood("happy"));
+
 // Exercise 9
 
 // Write a function that validates whether two strings are identical. Make it case insensitive.
 // match(“HELLO WORLD”) and (”hello world”) → true
 // match("mask", "mAskinG") ➞ false
-
+// h == H false
+// .toUpperCase()       үсэгнүүдийг том болгоно
+// .toLowerCase()        үсэгнүүдийг жижиг болгоно
+function identical(str1, str2) {
+  if (str1.length == str2.length) {
+    if (str1.toLowerCase() == str2.toLowerCase()) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  return false;
+}
+console.log(identical("HELLO WORLD", "hello world"));
 // Exercise 10
 
 // Create a function that takes a string as argument and returns "upper" if all the letters in a word are uppercase, "lower" if lowercase and "mixed" for any mix of the two.
 // getCase("javascript..") ➞ "lower"
 // getCase("SHOUT!") ➞ "upper"
+
+function upperLower(str) {                  // if(){}  nemeed nuhtsul bol   else if(){}   else if(){}   else ===> hamgiin suulid bichij bolno gantshan
+  if (str == str.toLowerCase()) {           // if(){}  nemeed nuhtsul bol   else if(){}   else if(){}   else ===> hamgiin suulid bichij bolno gantshan
+    return "Lower";
+  } else if (str == str.toUpperCase()) {
+    return "Upper";
+  } else return "Mixed";
+}
+
+console.log(upperLower("ddDDd"));
+
+
 
 // Exercise 11
 
@@ -257,19 +266,44 @@ console.log(isEqualStr("",""));
 // swapName("Ada Lovelace") ➞ "Lovelace Ada"
 // swapName(“Alan Turing”)➞  “Turing Alan”
 
+
+function swap(str){
+    return str.split(" ").reverse().join(" ")
+}
+console.log(swap("Ada Lovelace"));
+
+
+//  split-таслана   split(" ")-зайтай хэсгээр таслана.
+// reverse-эсрэгээр
+//  join- нийлүүлнэ.
+
 // Exercise 12
 
 // Create a function that takes a string and returns a string with its letters in alphabetical order.
 // AlphabetSoup("javascript") ➞ "aacijprstv"
 // AlphabetSoup(“simplon”) ➞”ilmnops”
 
+function alpha(str){
+    return str.split("").sort().join("")     // sort-цагаантолгойн дараалалд оруулна.
+
+}
+console.log(alpha("javascript"));
 // Exercise 13
 
 // Create a function that takes a number as argument and returns the incrementing (+1) for each odd number and decrementing (-1) for each even number.
 // incrementOrDecrement(5) ➞4
 // incrementOrDecrement(2) ➞3
 
-//console.log("functions2");
+function incrementOrDecrement(number){
+    if (number%2==0){
+        return number+1;
+    }
+    else {return number-1;}
+}
+console.log(incrementOrDecrement(6));
+
+
+
 
 // Exercise 1
 
@@ -285,6 +319,24 @@ console.log(isEqualStr("",""));
 // tipAmount(100, 'good') --> 20
 // tipAmount(40, 'fair') --> 6
 
+
+function tipAmount(number,str){
+    
+    if (str == "good"){
+        number=number*20/100
+        return number,str
+    } 
+    else if (str == "fair"){
+        number=number*15/100
+        return number,str 
+    }
+        else (str == "poor")
+            number=number*10/100
+            return number 
+       
+}
+console.log(tipAmount((1000),"good"));
+
 // Exercise 2
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -296,6 +348,21 @@ console.log(isEqualStr("",""));
 // totalAmount(100, 'good') --> 120
 // totalAmount(40, 'fair') --> 46
 
+function totalAmount(str){
+    
+    if (str== "good"){
+
+        return "tipAmount(100,good)-->120"
+    } 
+    else if (str== "fair"){
+        return "tipAmount(40,fair)-->46"
+    }
+        else (str== "poor") 
+            return "tipAmount(10,poor)-->11"
+       
+}
+console.log(totalAmount("good"));
+
 // Exercise 3
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -306,6 +373,28 @@ console.log(isEqualStr("",""));
 // Examples:
 // splitAmount(100, 'good', 5) --> 24
 // splitAmount(40, 'fair', 2) --> 23
+
+
+function splitAmount(str){
+     let huniiToo=5;
+     let Amount=100;
+     let Number=0;
+   
+    if (str== "good"){
+         Number=((Amount*20/100+Amount)/huniiToo)
+        return (str)
+    //} 
+    //else if (str== "fair"){
+       // return (splitAmount,'fair',huniiToo-->46/huniiToo)
+    //}
+        //else (str== "poor") 
+             // return (splitAmount,'poor',huniiToo-->11/huniiToo)
+       
+}
+}
+          console.log(splitAmount(100,"good",5));
+
+          //return (Amount,str,huniiToo,Number)
 
 // Exercise 4
 
@@ -342,6 +431,21 @@ console.log(isEqualStr("",""));
 // Examples:
 // numberJoinerWhile(1, 10) --> '1_2_3_4_5_6_7_8_9_10'
 // numberJoinerWhile(12, 14) --> '12_13_14'
+
+function numberJoinWhile(start, end) {
+  let result = "";
+  while (start <= end) {
+    result += start; //result=result +1;
+    console.log("result first ", result);
+    result += "_"; //result+_  10_
+    start++;
+
+    console.log("result ", result);
+    console.log("start ", start);
+  }
+  return result;
+}
+console.log(numberJoinWhile(10, 15));
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "numberJoinerFor" which does the same thing as "numberJoinerWhile",
