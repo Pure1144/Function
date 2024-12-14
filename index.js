@@ -637,11 +637,11 @@ function capitalizeNames(arr) {
   let newArray = [];
   for (let i = 0; i < arr.length; i++) {
     //console.log(arr[i]);                                                                //console.log(arr[i]);  arr-ийн элементүүдийг жагсаана.
-   
-    newArray.push(arr[i][0].toUpperCase() +arr[i].slice(1).toLowerCase())       //arr[i].slice(1).toLowerCase()   -slice(1) үлдсэн элементүүдээ нэмж байна.
 
-                                                                                       //arr[i][0].toUpperCase(); //console.log(arr[i][0]);
-                                                                                       //arr[i][1].toLowerCase(); //console.log(arr[i].slice(1));
+    newArray.push(arr[i][0].toUpperCase() + arr[i].slice(1).toLowerCase()); //arr[i].slice(1).toLowerCase()   -slice(1) үлдсэн элементүүдээ нэмж байна.
+
+    //arr[i][0].toUpperCase(); //console.log(arr[i][0]);
+    //arr[i][1].toLowerCase(); //console.log(arr[i].slice(1));
   }
   return newArray;
 }
@@ -650,81 +650,68 @@ console.log(capitalizeNames(["john", "JACOB", "jinGleHeimer", "schmidt"]));
 
 // 4) Make an array of strings of the names
 //function namesOnly(arr) {
-    // your code here
- // }
-   
-  // console.log(
-  //   namesOnly([
-  //     {
-  //       name: "Angelina Jolie",
-  //       age: 80,
-  //     },
-  //     {
-  //       name: "Eric Jones",
-  //       age: 2,
-  //     },
-  //     {
-  //       name: "Paris Hilton",
-  //       age: 5,
-  //     },
-  //     {
-  //       name: "Kayne West",
-  //       age: 16,
-  //     },
-  //     {
-  //       name: "Bob Ziroll",
-  //       age: 100,
-  //     },
-  //   ])
-  // );
-  // ["Angelina Jolie", "Eric Jones", "Paris Hilton", "Kayne West", "Bob Ziroll"]
+// your code here
+// }
 
-
+// console.log(
+//   namesOnly([
+//     {
+//       name: "Angelina Jolie",
+//       age: 80,
+//     },
+//     {
+//       name: "Eric Jones",
+//       age: 2,
+//     },
+//     {
+//       name: "Paris Hilton",
+//       age: 5,
+//     },
+//     {
+//       name: "Kayne West",
+//       age: 16,
+//     },
+//     {
+//       name: "Bob Ziroll",
+//       age: 100,
+//     },
+//   ])
+// );
+// ["Angelina Jolie", "Eric Jones", "Paris Hilton", "Kayne West", "Bob Ziroll"]
 
 function namesOnly(arr) {
-    let names =[];
-    for (let i=0; i<arr.length; i++){
-
-      names.push(arr[i].name)       // names-рүү утгыг хийж байна. Array i-ийн name-ийг.
-    }
-    return names
-
+  let names = [];
+  for (let i = 0; i < arr.length; i++) {
+    names.push(arr[i].name); // names-рүү утгыг хийж байна. Array i-ийн name-ийг.
   }
-   
-  console.log(
-     namesOnly([
-       {
-         name: "Angelina Jolie",
-         age: 80,
-       },
-       {
-         name: "Eric Jones",
-         age: 2,
-       },
-       {
-         name: "Paris Hilton",
-         age: 5,
-       },
-       {
-         name: "Kayne West",
-         age: 16,
-       },
-       {
-         name: "Bob Ziroll",
-         age: 100,
-       },
-     ])
-   );
-   ["Angelina Jolie", "Eric Jones", "Paris Hilton", "Kayne West", "Bob Ziroll"]
+  return names;
+}
 
-
-
-
-
-
-
-
-
+console.log(
+  namesOnly([
+    {
+      name: "Angelina Jolie",
+      age: 80,
+    },
+    {
+      name: "Eric Jones",
+      age: 2,
+    },
+    {
+      name: "Paris Hilton",
+      age: 5,
+    },
+    {
+      name: "Kayne West",
+      age: 16,
+    },
+    {
+      name: "Bob Ziroll",
+      age: 100,
+    },
+  ])
+);
+["Angelina Jolie", "Eric Jones", "Paris Hilton", "Kayne West", "Bob Ziroll"];
 
 // 5) Make an array of strings of the names saying whether or not they can go to The Matrix
 
@@ -776,73 +763,53 @@ function makeStrings(arr) {
 
 // ]));
 
-
-
 function makeStrings(arr) {
-   let newArray =[];
-    for (let i=0; i<arr.length; i++){
-        if(arr[i].age>=18){
-            newArray.push(`${arr[i].name} can go to The Matrix`)
-           
-        }
-        else{
-            newArray.push(`${arr[i].name} is under age`)
-        }
-    }  // name +is underAge  
-//`${i} canGo`
+  let newArray = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].age >= 18) {
+      newArray.push(`${arr[i].name} can go to The Matrix`);
+    } else {
+      newArray.push(`${arr[i].name} is under age`);
+    }
+  } // name +is underAge
+  //`${i} canGo`
 
-    return newArray
-  
+  return newArray;
+}
 
-  
-  }
-  
-   console.log(makeStrings([
-  
-       {
-  
-           name: "Angelina Jolie",
-  
-           age: 80
-  
-       },
-  
-       {
-  
-           name: "Eric Jones",
-  
-           age: 2
-  
-       },
-  
-       {
-  
-           name: "Paris Hilton",
-  
-           age: 5
-  
-       },
-  
-       {
-  
-           name: "Kayne West",
-  
-           age: 16
-  
-       },
-  
-       {
-  
-           name: "Bob Ziroll",
-  
-           age: 100
-  
-       }
-  
-   ]));
-  
-  
+console.log(
+  makeStrings([
+    {
+      name: "Angelina Jolie",
 
+      age: 80,
+    },
+
+    {
+      name: "Eric Jones",
+
+      age: 2,
+    },
+
+    {
+      name: "Paris Hilton",
+
+      age: 5,
+    },
+
+    {
+      name: "Kayne West",
+
+      age: 16,
+    },
+
+    {
+      name: "Bob Ziroll",
+
+      age: 100,
+    },
+  ])
+);
 
 // ["Angelina Jolie can go to The Matrix",
 
@@ -871,52 +838,82 @@ Examples:
 */
 
 function doubleValues(arr) {
-    let dd = [];
-    for (let i=0; i<arr.length; i++){
-        dd.push(arr[i]*2);
-    }
-    return dd;
+  let dd = [];
+  for (let i = 0; i < arr.length; i++) {
+    dd.push(arr[i] * 2);
+  }
+  return dd;
 }
-   
-console.log(doubleValues([1,2,3]));
 
-/*
+console.log(doubleValues([1, 2, 3]));
 
+//Write a function called onlyEvenValues which accepts an array and returns a new array with only the even values in the array passed to the function
 
+//Examples:
 
+//onlyEvenValues([1,2,3]) // [2]
 
+//onlyEvenValues([5,1,2,3,10]) // [2,10]
 
+function evenOddValue(arr) {
+  let dd = [];
+  let odd = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 == 0) {
+      dd.push(arr[i]);
+    } else {
+      odd.push(arr[i]);
+    }
+  }
+  return { even: dd, odd: odd };
+}
 
-
-
-
-Write a function called onlyEvenValues which accepts an array and returns a new array with only the even values in the array passed to the function
-
- 
-
-Examples:
-
-    onlyEvenValues([1,2,3]) // [2]
-
-    onlyEvenValues([5,1,2,3,10]) // [2,10]
-
- 
-
-*/
-
-// function onlyEvenValues(arr) {}
-
-// console.log(onlyEvenValues([1, 2, 3, 4, 5, 7, 8, 9, 10, 11]));
-
-// console.log(filteredNumbers);F
-
-// console.log(`Initial array ${numbers}`);
+console.log(evenOddValue([1, 2, 3]));
 
 // numbers.pop();
 
 // console.log(`Popped array ${numbers}`);
 
-// numbers.push(123);
+// function Toontsuvaa(arr) {
+//     arr.pop();                                                 // arr.pop(); -suuliin toog arilgana
+//     let numbers = [];
+//     for (let i = 0; i < arr.length; i++) {
+//       if (arr[i] % 2 == 0) {
+//         numbers.push(arr[i]);
+//       }
+//     } return numbers
+//   }
+
+//   console.log(Toontsuvaa([1, 2, 3, 4, 5, 6]));
+
+// console.log(filteredNumbers);
+
+const scores = [10, 30, 60, 100, 86]; //1. Massive ugsun.
+
+function scoreFilter(value) {
+  //2.score Filter value-aar tootsohoor beldsen
+  return value > 80;
+}
+let newFilteredArray = scores.filter(scoreFilter); // 3.Shine hooson massive zarlana.
+console.log(newFilteredArray); // 4.Ur dung harah
+
+//console.log(`Initial array ${numbers}`);
+
+function Toontsuvaa(arr) {
+  //   arr.shift(); //arr.pop(); -suuliin toog arilgana
+  let numbers = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 == 0) {
+      numbers.push(arr[i]);
+    }
+  }
+
+  numbers.shift(); //-ehnii toog arilgana
+  return numbers;
+  return arr;
+}
+
+console.log(Toontsuvaa([1, 2, 3, 4, 5, 6]));
 
 // console.log(`Pushed array ${numbers}`);
 
@@ -998,25 +995,30 @@ const originalFlavors = [
   "Vanilla Burnt Almond",
 ];
 
-/* Task 1: Confirm that the array is exactly 31 flavors. Your function should accept:
+//console.log(originalFlavors.length==31);
 
- 
+//  Task 1: Confirm that the array is exactly 31 flavors. Your function should accept:
 
-(1) an array
+// (1) an array
 
- 
+// Your function should return a boolean TRUE if the length of the array is 31 and FALSE if the length of the array is NOT 31.
 
-Your function should return a boolean TRUE if the length of the array is 31 and FALSE if the length of the array is NOT 31.
+function checkValuesNumbar(data) {
+  if (data.length == 31) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
- 
+console.log(checkValuesNumbar(originalFlavors));
 
- 
-
+/*
  
 
 To save you from having to count the items above, you can assume that length of originalFlavors is 31. You may also want to test your function by creating and passing an array of a different length, to make sure it returns FALSE if length is not 31.
 
- 
+done!
 
 i.e. is31Flavors(originalFlavors) will return TRUE.*/
 
@@ -1043,30 +1045,42 @@ Your function should add the flavor to the front of the array and console.log th
  
 
 For example addFlavor("Rainbow Sherbert", originalFlavors) should return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla Burnt Almond"] */
+//.pop()                 tugsguliig hasna
+//.push()
+//.shift()
+//.unshift()           hamgiin ehend oruulah
 
-function addFlavor(array, flavor) {}
+function addFlavor(array, flavor) {
+  //addFlavor-үүсгэсэн функц,(array-функц дотор ажиллах хувьысагачид)
+  array.unshift(flavor); // Массивын эхэнд оруулна
+  return array; // Массиваа харна.
+}
+console.log(addFlavor(originalFlavors, "Rainbow Sherbert")); //console.log(Massive,Хаана оруулаа вэ,Юуг оруулах вэ)
 
-/* Task 3: Houston, we have a problem! There are now 32 flavors in the array! Your task is to remove an item from the end of the array.
+// Task 3: Houston, we have a problem! There are now 32 flavors in the array! Your task is to remove an item from the end of the array.
 
- 
+function checkValuesNumbar(data) {
+  if (data.length == 31) {
+    return true;
+  } else {
+    return `Houston, we have a problem! There are now ${data.length} flavors in the array! Your task is to remove an item from the end of the array.`;
+  }
+}
 
-Your function should accept:
+console.log(checkValuesNumbar(originalFlavors));
 
- 
+//Your function should accept:
 
-(1) an array
+//(1) an array
 
- 
+//Your function should remove a flavor from the end of the array and console.log the resulting array.
+//For example removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]*/
 
-Your function should remove a flavor from the end of the array and console.log the resulting array.
-
- 
-
- 
-
- 
-
-For example removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]*/
+function rmvFlavor(array) {
+  array.pop();
+  return array;
+}
+console.log(rmvFlavor(originalFlavors));
 
 /* Task 4: Write a function that returns a flavor at a given index in the array.
 
@@ -1084,49 +1098,65 @@ Your function should accept:
 
 For example, getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully. */
 
-/* Task 5: As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, as opposed to just arbitrarily removing the first or last flavor. Your task is to get an index by flavor name, and remove that flavor from the array.
+function getFlavorByIndex(array, index) {
+  //addFlavor-үүсгэсэн функц,(array-функц дотор ажиллах хувьысагачид)
+  return array[index - 1]; // Массиваа индекс нэгээс эхэлнэ.
+}
+console.log(getFlavorByIndex(originalFlavors, 1)); //console.log(Massive,Хаана оруулаа вэ,Юуг оруулах вэ)
 
- 
+//Task 5: As corporate wants to add more and more flavors to their lineup, they've realized that they need to remove flavors based on flavor name, as opposed to just arbitrarily removing the first or last flavor. Your task is to get an index by flavor name, and remove that flavor from the array.
 
-Your function should accept:
+//Your function should accept:
 
- 
+//(1) an array
 
-(1) an array
+//(2) a string (flavor)
 
-(2) a string (flavor)
+//For example, removeFlavorByName(originalFlavors, "Vanilla") would return an array with the length 30 including all of the flavors except Vanilla.
 
- 
+//Hint: You can use .splice() for this
 
-For example, removeFlavorByName(originalFlavors, "Vanilla") would return an array with the length 30 including all of the flavors except Vanilla.
+function removeFlavorByName(array, name) {
+  let index = array.indexOf(name); //Массив дотрох Нэрний индексийг авч байна.
 
- 
+  array.splice(index, 1); //                               1 baigaa shaltgaan uy ve?
 
-Hint: You can use .splice() for this
+  return array;
+}
 
- 
+console.log(removeFlavorByName(originalFlavors, "Vanilla"));
+console.log(originalFlavors);
 
-*/
+//Task 6: With all of these changes going on, we don't want to lose track of the actual, original 31 flavors. Write a function called copy that makes a copy of the array.
+//.reduce()     ->.reduce((total,value)=>{uildel})
+//.filter()     ->.filter((value)=>{condition})
+//.map()        ->.map(()=>{})
+function getOriginalFlavorByIndex(data) {
+  //Шинэ функц зарлаж байна
+  const newArray = [];
+  data.map((el) => {
+    newArray.push(el);
+  }); //el=data[i]   элемент гэдэг нь датагийн индекс юм. {newArray.push(el)}-Шинэ  -д элементүүдийг өглөө.
+  return newArray;
+}
+console.log(getOriginalFlavorByIndex(originalFlavors)); //console.log(Massive,Хаана оруулаа вэ,Юуг оруулах вэ)
+console.log(removeFlavorByName(originalFlavors, "Vanilla"));
 
-/* Task 6: With all of these changes going on, we don't want to lose track of the actual, original 31 flavors. Write a function called copy that makes a copy of the array.
+///Your function should accept:
 
- 
+//2 arguments 1 for your new array and one for your original array
 
-Your function should accept:
+//Task 7: July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. Write a function that checks every item in the array for a given string and returns a new array called filteredArray with just these values. Rather than hardcoding "chocolate" into your function, pass a string as a parameter, and invoke with the argument "chocolate". This way you could also filter for "Vanilla", "Sherbert", etc. when those holidays roll around.
 
- 
+function filterByWord(array, word) {
+  //Шинэ функц зарлаж байна
 
-2 arguments 1 for your new array and one for your original array
+  let newValue = array.filter((index) => index.includes(word)); //   let newValue -өөрчилсщщөн утгыг агуулах массив.
+  return newValue;
+}
+console.log(filterByWord(originalFlavors, "Lemon")); //console.log(Massive,Хаана оруулаа вэ,Юуг оруулах вэ)
 
- 
-
-and should return a new array that is identical to the old array. You can name the new array however you'd like. */
-
-/* Task 7: July 7th is "World Chocolate Day" and Baskin Robins wants to create promotional materials highlighting all of their chocolate flavors. Write a function that checks every item in the array for a given string and returns a new array called filteredArray with just these values. Rather than hardcoding "chocolate" into your function, pass a string as a parameter, and invoke with the argument "chocolate". This way you could also filter for "Vanilla", "Sherbert", etc. when those holidays roll around.
-
- 
-
-Your function should accept:
+/*Your function should accept:
 
  
 
@@ -1150,25 +1180,19 @@ DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem.
 
 hint - you can use the .includes method to help you solve this */
 
-// function filterByWord(array, word) {
+function filterByWord(array, word) {
+  const filteredArray = [];
 
-//   const filteredArray = [];
+  array.forEach(function (flavor) {
+    if (flavor.includes(word)) {
+      console.log(flavor);
+    }
+  });
 
-//   array.forEach(function (flavor) {
+  return filteredArray;
+}
 
-//     if (flavor.includes(word)) {
-
-//       console.log(flavor);
-
-//     }
-
-//   });
-
-//   //   return filteredArray;
-
-// }
-
-// console.log(filterByWord(originalFlavors, "chocolate"));
+console.log(filterByWord(originalFlavors, "chocolate"));
 
 /* 🧁🍦🍨 STRETCH 🍨🍦🍫*/
 
@@ -1189,7 +1213,75 @@ and should return the average number of words per item in the array.
  
 
 For example, getAverageWordLength(originalFlavors) should return a number between 0 and 3. */
+const originalFlavorss = [
+  "Banana Nut Fudge",
 
-function getAverageWordLength(/*code here*/) {
-  /*code here*/
-}
+  "Black Walnut",
+
+  "Burgundy Cherry",
+
+  "Butterscotch Ribbon",
+
+  "Cherry Macaron",
+
+  "Chocolate",
+
+  "Chocolate Almond",
+
+  "Chocolate Chip",
+
+  "Chocolate Fudge",
+
+  "Chocolate Mint",
+
+  "Chocolate Ribbon",
+
+  "Coffee",
+
+  "Coffee Candy",
+
+  "Date Nut",
+
+  "Eggnog",
+
+  "French Vanilla",
+
+  "Green Mint Stick",
+
+  "Lemon Crisp",
+
+  "Lemon Custard",
+
+  "Lemon Sherbet",
+
+  "Maple Nut",
+
+  "Orange Sherbet",
+
+  "Peach",
+
+  "Peppermint Fudge Ribbon",
+
+  "Peppermint Stick",
+
+  "Pineapple Sherbet",
+
+  "Raspberry Sherbet",
+
+  "Rocky Road",
+
+  "Strawberry",
+
+  "Vanilla",
+
+  "Vanilla Burnt Almond",
+];
+//function getAverageWordLength(array) {
+// let wordlenghth =0;
+
+let allWordlength = originalFlavorss.reduce((sum, value) => {             // value-массив дотрох үгийн урт?
+  // console.log(value.length)
+  return (sum += value.trim().length);}, 0);                                  //sum +=  sum=sum+1, trim().-хоосон зайн авч хаяна.
+      
+
+//console.log(Math.floor(allWordlength / originalFlavorss.length));
