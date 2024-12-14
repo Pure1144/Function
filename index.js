@@ -1285,3 +1285,7 @@ let allWordlength = originalFlavorss.reduce((sum, value) => {             // val
    
 
 console.log(Math.floor(allWordlength / originalFlavorss.length));
+
+
+
+test1 PC talaas
