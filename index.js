@@ -1282,6 +1282,6 @@ const originalFlavorss = [
 let allWordlength = originalFlavorss.reduce((sum, value) => {             // value-массив дотрох үгийн урт?
   // console.log(value.length)
   return (sum += value.trim().length);}, 0);                                  //sum +=  sum=sum+1, trim().-хоосон зайн авч хаяна.
-      
+   
 
-//console.log(Math.floor(allWordlength / originalFlavorss.length));
+console.log(Math.floor(allWordlength / originalFlavorss.length));
